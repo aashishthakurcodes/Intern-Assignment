@@ -102,7 +102,7 @@ function Login() {
               <span  style={{color:"white"}}>
                 New User ? Click to Sign up
               </span>
-              <div><Link to="/signup">Sign UP</Link></div>
+              <div><Link to="/signup">SIGN UP</Link></div>
             </div>
             <div className="signBTN">
             <Button className="submit" variant="primary" type="submit" >

@@ -121,7 +121,7 @@ function Signup() {
               <span  style={{color:"white"}}>
                 Already have an account ?
               </span>
-              <div><Link to="/login">Login</Link></div>
+              <div><Link to="/login">LOGIN</Link></div>
             </div>
             <div className="signBTN">
             <Button className="submit" variant="primary" type="submit" style={{background:"#3CD0F1",color:"black",border:"none"}}>

@@ -1,132 +1,179 @@
-
+/* //For Register and Login Page */
 *,
 ::before,
-::after{
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-label{
+label {
   font-size: 20px;
 }
 
 html,
-body{
+body {
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background: rgb(3, 31, 29);
+  background: linear-gradient(
+    171deg,
+    rgba(3, 31, 29, 1) 0%,
+    rgba(19, 245, 231, 1) 100%
+  );
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* .container{
-  background-color: #FFF;
-  padding: 32px 48px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-}
-
-.container > h1{
-  margin-bottom: 20px;
-}
-
-.container > form{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.container div{
-  display: flex;
-  flex-direction: column;
-}
-
-.container input{
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid black;
-}
-
-.container input::placeholder{
-  font-size: 12px;
-  font-style: italic;
-}
-
-button{
-  background-color: purple;
-  border: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px 0;
-} */
-
-.main{
-  /* border: 2px solid red; */
+.main {
+  overflow: auto;
   background: rgb(40, 40, 76);
   color: #000;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.85) 0px 25px 20px -20px;
 }
 
-.container{
-  /* border: 2px solid green; */
-  background:  rgb(26, 26, 45);
- 
+.container {
+  background: rgb(26, 26, 45);
+
   padding: 20px;
   width: 400px;
 }
-.signInbOx{
+.signInbOx {
   /* border: 3px solid blue; */
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  
-
 }
-.signIn{
-  /* border: 2px solid pink; */
-  background: #26b9a3;
+.signIn {
+  background: #3cd0f1;
   position: absolute;
   margin-top: 10px;
-  padding: 5px 80px;
-  
-  
+  padding: 10px 80px;
 }
-.signIn p{
+.signIn p {
   text-align: center;
-  border: 2px solid rgb(147, 145, 145);
+  margin: 0;
+  /* border: 2px solid rgb(147, 145, 145); */
 }
-.usericon{
+.usericon {
   /* border: 2px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding: 15px;
 }
-.loginspan{
+.loginspan {
   /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.signBTN{
+.signBTN {
   /* border: 2px solid red; */
   margin: 10px;
 }
-.submit{
+.submit {
   width: 100%;
+  background: #3cd0f1;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+.submit:hover {
+  background: #1c5f6e;
+}
+/* //Responsive Design for Mobiles */
+@media screen and (max-width: 450px) {
+  .main {
+    width: auto;
+    max-width: auto;
+  }
+  .container {
+    width: auto;
+  }
+  .signIn {
+    padding: 5px 40px;
+  }
+}
+
+/* HomePage  */
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  width: max-content;
+ 
+  padding: 20px;
+  background-color: #f0f0f0; 
+}
+.userData {
+  width: 100%;
+  max-width: 800px; 
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.userTable {
+  margin-top: 20px;
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+button {
+  background-color: #007bff; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd; 
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+tbody tr:hover {
+  background-color: #e9ecef; 
+}
+.loading-message {
+  text-align: center;
+  font-size: 24px;
 }
