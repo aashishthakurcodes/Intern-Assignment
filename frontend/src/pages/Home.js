@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "../utils";
 import { ToastContainer } from "react-toastify";
 import Table from "react-bootstrap/Table";
+import '../../src/App.css'
 
 
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     setLoggedInUser(localStorage.getItem("loggedInUser"));
-    fetchUsers();
+    fetchUsers(); // Fetch users when component mounts
   }, []);
 
   const handleLogout = () => {
@@ -44,7 +45,7 @@ function Home() {
         createdAt: new Date(user.createdAt).toLocaleDateString(),
       }));
       setUsers(usersWithSerial);
-      setLoading(false);
+      setLoading(false); // Set loading to false after data has been fetched
     } catch (error) {
       handleError(error);
     }
@@ -52,6 +53,7 @@ function Home() {
 
   return (
     <div className="homepage">
+        
       {loading ? (
         <div className="loading-message">
           <p>Loading...</p>
@@ -59,9 +61,9 @@ function Home() {
       ) : (
         <div className="userData">
           <h1>Welcome {loggedInUser}</h1>
-          <button onClick={handleLogout}>Logout</button>
+         
           <div className="userTable">
-            <Table striped bordered hover>
+            <Table striped bordered hover responsive>
               <thead>
                 <tr>
                   <th>Sr no.</th>
@@ -83,6 +85,7 @@ function Home() {
                 ))}
               </tbody>
             </Table>
+            <button onClick={handleLogout}>Logout</button>
           </div>
           <ToastContainer />
         </div>

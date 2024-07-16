@@ -15,6 +15,15 @@ html,
 body {
   height: 100%;
   width: 100%;
+ 
+}
+
+.user-container{
+  /* border: 2px solid red; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgb(3, 31, 29);
   background: linear-gradient(
     171deg,
@@ -23,18 +32,14 @@ body {
   );
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .main {
   overflow: auto;
   background: rgb(40, 40, 76);
   color: #000;
   border-radius: 10px;
+  width: fit-content;
   box-shadow: rgba(0, 0, 0, 0.85) 0px 25px 20px -20px;
+  
 }
 
 .container {
@@ -103,27 +108,34 @@ body {
   }
 }
 
-/* HomePage  */
+
+/* //Home Page */
+
 
 .homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  width: max-content;
- 
-  padding: 20px;
-  background-color: #f0f0f0; 
+ width: auto;
+ height: 100vh;
+ border: 5px solid green;
+padding: 20px;
+background-color: #f0f0f0; 
 }
+
 .userData {
   width: 100%;
   max-width: 800px; 
   background-color: #fff; 
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  box-shadow: 8px 9px 19px 0px rgba(0,0,0,0.9);
+-webkit-box-shadow: 8px 9px 19px 0px rgba(0,0,0,0.9);
+-moz-box-shadow: 8px 9px 19px 0px rgba(0,0,0,0.9);
 }
+
 .userTable {
   margin-top: 20px;
   width: 100%;
@@ -131,11 +143,11 @@ body {
 
 h1 {
   margin-bottom: 20px;
-  color: #333;
+  color: #333; /* Dark text color */
 }
 
 button {
-  background-color: #007bff; 
+  background-color: #007bff; /* Bootstrap primary color */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -145,7 +157,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
 table {
@@ -158,7 +170,7 @@ th,
 td {
   padding: 10px;
   text-align: center;
-  border: 1px solid #ddd; 
+  border: 1px solid #ddd; /* Light gray border */
 }
 
 th {
@@ -167,13 +179,18 @@ th {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2; /* Alternate row background color */
 }
 
 tbody tr:hover {
-  background-color: #e9ecef; 
+  background-color: #e9ecef; /* Hover row background color */
 }
 .loading-message {
   text-align: center;
   font-size: 24px;
+}
+@media screen and (max-width: 450px){
+  .homepage{
+    height: auto;
+  }
 }

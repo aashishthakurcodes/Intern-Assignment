@@ -16,7 +16,6 @@ function Login() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     const copyLoginInfo = { ...loginInfo };
     copyLoginInfo[name] = value;
     setLoginInfo(copyLoginInfo);
@@ -52,14 +51,14 @@ function Login() {
       } else if (!success) {
         handleError(message);
       }
-      console.log(result);
+      
     } catch (err) {
       handleError("Server Error", err);
     }
   };
 
   return (
-    <div>
+    <div className="user-container">
       <div className="main">
         <div className="signInbOx">
           <div className="signIn">
